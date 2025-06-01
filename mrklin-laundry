@@ -1,0 +1,17 @@
+mrklin-laundry/
+├── index.html
+├── dashboard.html
+├── booking.html
+├── order.html
+├── payment.html
+├── riwayat.html
+├── css/
+│   └── style.css
+├── js/
+│   ├── login.js
+│   ├── booking.js
+│   ├── order.js
+│   ├── payment.js
+│   └── riwayat.js
+└── assets/
+    └── img/

@@ -1,0 +1,542 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  height: 100vh;
+  background-color: #f0f0f0;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+.left-panel {
+  background-color: #69a8f5;
+  color: white;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  text-align: center;
+}
+
+.left-panel h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.left-panel p {
+  font-size: 0.9rem;
+  margin-bottom: 2rem;
+}
+
+.btn-start {
+  text-decoration: none;
+  background-color: white;
+  color: #69a8f5;
+  padding: 0.7rem 1.5rem;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.right-panel {
+  flex: 1;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-box {
+  background-color: #c7dcfa;
+  padding: 2rem;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 400px;
+}
+
+.form-box h2 {
+  margin-bottom: 0.5rem;
+}
+
+.form-box p {
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+}
+
+form label {
+  display: block;
+  margin-bottom: 0.3rem;
+  font-size: 0.9rem;
+}
+
+form input[type="text"],
+form input[type="password"] {
+  width: 100%;
+  padding: 0.6rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.password-row {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.password-row input {
+  flex: 1;
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.checkbox input {
+  margin-right: 0.5rem;
+}
+
+button {
+  width: 100%;
+  padding: 0.6rem;
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn-daftar {
+  background-color: #69a8f5;
+  color: white;
+}
+
+.btn-google {
+  background-color: #90c2ff;
+  color: white;
+}
+
+.btn-login {
+  background-color: #69a8f5;
+  color: white;
+}
+.dashboard-wrapper {
+  display: flex;
+  height: 100vh;
+}
+
+.sidebar {
+  width: 220px;
+  background-color: #69a8f5;
+  color: white;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar .logo h2 {
+  font-size: 1.1rem;
+  margin-bottom: 0.3rem;
+}
+
+.sidebar .logo p {
+  font-size: 0.8rem;
+  margin-bottom: 1.5rem;
+}
+
+.sidebar nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar nav ul li {
+  margin-bottom: 1rem;
+}
+
+.sidebar nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.95rem;
+  display: block;
+}
+
+.sidebar nav ul li a:hover {
+  text-decoration: underline;
+}
+
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.topbar {
+  background-color: #69a8f5;
+  padding: 0.7rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.top-left a {
+  margin-right: 1rem;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.top-right {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.top-right input {
+  padding: 0.3rem;
+}
+
+.top-right button {
+  padding: 0.4rem 0.7rem;
+}
+
+.profile-icon {
+  font-size: 1.5rem;
+}
+
+.welcome {
+  padding: 2rem;
+}
+document.addEventListener("DOMContentLoaded", function () {
+  const name = localStorage.getItem("userName") || "Tamu";
+  document.getElementById("welcome").innerText = `Selamat datang, ${name}!`;
+});
+// === Untuk booking.html ===
+
+/* === Umum === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* === Sidebar === */
+.dashboard-wrapper {
+  display: flex;
+  height: 100vh;
+}
+
+.sidebar {
+  width: 220px;
+  background-color: #69a8f5;
+  color: white;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar .logo h2 {
+  font-size: 1.2rem;
+  margin-bottom: 0.2rem;
+}
+
+.sidebar .logo p {
+  font-size: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+.sidebar nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar nav ul li {
+  margin: 1rem 0;
+}
+
+.sidebar nav ul li a {
+  color: white;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+/* === Topbar === */
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.topbar {
+  background-color: #69a8f5;
+  padding: 0.7rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+
+.top-left a {
+  margin-right: 1rem;
+  font-weight: 500;
+  color: white;
+}
+
+.top-right {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.top-right input {
+  padding: 0.3rem;
+}
+
+.top-right button {
+  padding: 0.4rem 0.7rem;
+  border: none;
+  background-color: white;
+  color: #69a8f5;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.profile-icon {
+  font-size: 1.5rem;
+}
+
+/* === Booking Page === */
+.booking-container {
+  display: flex;
+  padding: 2rem;
+  gap: 2rem;
+}
+
+.booking-list,
+.booking-form {
+  flex: 1;
+  background-color: white;
+  padding: 1.5rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+/* Kalender */
+.calendar-box {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.calendar {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 0.5rem;
+}
+
+.calendar th,
+.calendar td {
+  border: 1px solid #ccc;
+  padding: 0.6rem;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+/* Tombol jam */
+.time-options {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.time-slot {
+  background-color: lime;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.time-slot.selected {
+  background-color: #007f00;
+}
+
+/* Form Booking */
+.booking-form form input {
+  width: 100%;
+  padding: 0.6rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.btn-booking {
+  background-color: limegreen;
+  color: white;
+  border: none;
+  padding: 0.7rem 1.2rem;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn-booking:hover {
+  background-color: green;
+}
+.calendar-box {
+  margin-bottom: 1rem;
+}
+
+.calendar-box input[type="date"] {
+  padding: 0.6rem;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+/* === Untuk order.html === */
+.order-container {
+  display: flex;
+  gap: 2rem;
+  padding: 2rem;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.order-form {
+  flex: 2;
+}
+
+.order-form label {
+  display: block;
+  margin: 1rem 0 0.4rem;
+}
+
+.order-form input,
+.order-form select {
+  width: 100%;
+  padding: 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.order-summary {
+  flex: 1;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: #fff;
+}
+/* === Untuk payment.html === */
+.payment-container {
+  padding: 2rem;
+  text-align: center;
+}
+
+.payment-options {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  max-width: 400px;
+  margin-inline: auto;
+}
+
+.payment-options label {
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.payment-options input[type="radio"] {
+  transform: scale(1.4);
+  margin-right: 1rem;
+}
+/* Gaya untuk halaman riwayat */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f5f5f5;
+  margin: 0;
+  padding: 0;
+}
+
+.riwayat-page {
+  padding: 2rem;
+}
+
+.riwayat-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.riwayat-card {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  margin-bottom: 1.5rem;
+}
+
+.btn-wrap {
+  margin-top: 1rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.btn-wrap button {
+  background-color: #69a8f5;
+  border: none;
+  padding: 0.5rem 1rem;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-wrap button:hover {
+  background-color: #3c85d4;
+}
+
+.nav-pagination {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.nav-pagination button {
+  margin: 0 0.5rem;
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: none;
+  background-color: #e0e0e0;
+  cursor: pointer;
+}
+
