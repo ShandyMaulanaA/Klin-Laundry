@@ -12,6 +12,6 @@ document.getElementById("loginForm").addEventListener("submit", function (e) {
 
   localStorage.setItem("userName", username);
   localStorage.setItem("userAddress", alamat);
-  window.location.href = "dashboard.html";
+  window.location.href ="dashboard.html";
 });
 
